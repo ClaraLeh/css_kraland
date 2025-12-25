@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.0.1
+@version        1.0.2
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -10,12 +10,12 @@
 
 @-moz-document domain("www.kraland.org"), domain("test.kraland.org") {
     html {
-        background-color:#ff0073;
+        background-color:#ffffff;
         
     }
     
     body {
-        background-color:#bfff00;
+        background-color:#ffffff;
     }
     
     a {
