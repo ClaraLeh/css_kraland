@@ -159,17 +159,6 @@
         background: #f4f4ea;
     }
     
-    .tagforum {
-        display:flex;
-        align-items:center;
-    }
-    
-    .tagforum span {
-        display:flex;
-        align-self: center;        
-        margin-left: 3px ;        
-    }
-    
     a.list-group-item, button.list-group-item {
         background-color: #f4f4ea;
     }
@@ -324,6 +313,17 @@
     div#col-right tbody tr td:nth-child(1) {
         width:55%;
     }
+
+    .tagforum {
+        display:flex;
+        align-items:center;
+    }
+    
+    .tagforum span {
+        display:flex;
+        align-self: center;        
+        margin-left: 3px ;        
+    }
 }
 
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/.*/.*") {
@@ -350,6 +350,17 @@
     
     div#col-right tbody tr td:nth-child(1) {
         width:55%;
+    }
+
+    .tagforum {
+        display:unset;
+        align-items:unset;
+    }
+    
+    .tagforum span {
+        display:unset;
+        align-self: unset;        
+        margin-left: unset;        
     }
 }
 
