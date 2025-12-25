@@ -319,10 +319,18 @@
         align-items:center;
     }
     
+    .tagforum i {
+        margin-right: 3px;
+    }
+    
     .tagforum span {
         display:flex;
         align-self: center;        
         margin-left: 3px ;        
+    }
+    
+    .tagforum a {
+        margin-left: 3px ;
     }
 }
 
@@ -362,6 +370,15 @@
         align-self: unset;        
         margin-left: unset;        
     }
+    
+    .tagforum i {
+        margin-right: unset;
+    }    
+    
+    .tagforum a {
+        margin-left: unset ;
+    }
+    
 }
 
 
