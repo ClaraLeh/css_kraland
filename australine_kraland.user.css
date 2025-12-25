@@ -10,12 +10,12 @@
 
 @-moz-document domain("www.kraland.org"), domain("test.kraland.org") {
     html {
-        background-color:#FFF;
+        background-color:#ff0073;
         
     }
     
     body {
-        background-color:#FFF;
+        background-color:#bfff00;
     }
     
     a {
