@@ -5,11 +5,12 @@
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
+@updateURL      https://github.com/ClaraLeh/css_kraland/australine_kraland.user.css
 ==/UserStyle== */
 
 @-moz-document domain("www.kraland.org"), domain("test.kraland.org") {
     html {
-        background-color:#fff;
+        background-color:#ff00ff;
         
     }
     
@@ -245,7 +246,7 @@
         margin-bottom:2px;
 
     }
-    
+
 /*   
     // CUSTOM FLAG ON FORUM
     
