@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.0
+@version        1.2.1
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -774,7 +774,7 @@ domain("test.kraland.org") {
     }
 }
 
-@-moz-document regexp("http://.*\\.kraland\\.org/forum/[^/]*/[^/]*") {
+@-moz-document regexp("http://.*\\.kraland\\.org/forum/[^/]*/(?!repondre)[^/]*") {
 
     /*      regexp targets forum/???/???         */
     div#col-right tbody tr td:nth-child(2)::before {
