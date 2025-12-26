@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.1.0
+@version        1.1.1
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -55,6 +55,7 @@
     
     a {
        color: var(--lk-color-1);
+       background-color:unset;
     }
     
     .panel {
