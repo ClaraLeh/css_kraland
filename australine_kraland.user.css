@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.0.7
+@version        1.1.0
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -9,13 +9,38 @@
 ==/UserStyle== */
 
 @-moz-document domain("www.kraland.org"), domain("test.kraland.org") {
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color-1: #363636;
+            --bg-color-2: #515151;
+            --bg-color-3: #717171;
+            --lk-color-1: #fde263;
+            --lk-color-2: #ffeb9b;
+            --tx-color-1: #e4e4e4;
+            --bd-color-1: #616161;
+        }
+        
+        body>div:nth-child(1)>div:nth-child(1) {
+            content: url("http://img7.kraland.org/logo_dark.png");
+        }
+        
+    }
     
-    :root {
-        --bg-color-1: #ffffff;
-        --bg-color-2: #f4f4ea;
-        --bg-color-3: #e8e0c0;
-        --lk-color-1: #b9282d;
-        --lk-color-2: #f20009;
+    @media (prefers-color-scheme: light) {
+        :root {
+            --bg-color-1: #ffffff;
+            --bg-color-2: #f4f4ea;
+            --bg-color-3: #e8e0c0;
+            --lk-color-1: #b9282d;
+            --lk-color-2: #f20009;
+            --tx-color-1: #555;
+            --bd-color-1: #ddd;
+        }
+            
+        body>div:nth-child(1)>div:nth-child(1) {
+            content: url("https://i.imgur.com/K2CDrAv.png");
+        }
     }
     
     html {
@@ -25,15 +50,33 @@
     
     body {
         background-color: var(--bg-color-1);
+        color: var(--tx-color-1);
     }
     
     a {
        color: var(--lk-color-1);
     }
     
+    .panel {
+        background-color: var(--bg-color-1);
+    }
+    
+    .panel-default > .panel-heading {
+        color: var(--tx-color-1);
+    }
+    
     a:hover, a:active {
         color: var(--lk-color-2);
         text-decoration: none;
+    }
+    
+    a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+        background-color: var(--bg-color-1);
+        color: var(--tx-color-2);
+    }
+    
+    a.list-group-item, button.list-group-item {
+        color: var(--tx-color-1);
     }
     
     .pagination > li > a, .pagination > li > a:active, .pagination > li > a:visited, .pagination > li > span, .pagination > li > span:active, .pagination > li > span:visited {
@@ -96,10 +139,6 @@
         vertical-align: middle;        
     }
     
-    body>div:nth-child(1)>div:nth-child(1) {
-        content: url("https://i.imgur.com/K2CDrAv.png");
-    }
-    
     div#col-right tbody tr td:nth-child(1) p :is(span, a, i) {
         display:flex;
         align-self: center;        
@@ -108,6 +147,14 @@
     
     .panel-heading {
         background-color: var(--bg-color-3) !important;
+    }
+    
+    .panel-default {
+        border-color: var(--bd-color-1);
+    }
+    
+    .panel-default > .panel-heading {
+        border-color: var(--bd-color-1);
     }
     
     .label-default {
@@ -145,18 +192,30 @@
     
     .navbar-inverse {
         background-color: var(--bg-color-3);
-        border-color: var(--bg-color-3);
+        border-color: var(--bg-color-1);
     }
     
     .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-header a.navbar-brand {
         color:var(--lk-color-1);
     }
     
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+        color:var(--bg-color-1);
+    }
+    
     .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
         z-index: 2;
         color: var(--lk-color-1);
         background-color: var(--bg-color-3);
-        border-color: var(--bg-color-3);
+        border-color: var(--bd-color-1);
+    }
+    
+    .dropdown-menu {
+        background-color: var(--bg-color-1);
+    }
+    
+    .dropdown-menu>li>a {
+        color: var(--tx-color-1);
     }
     
     .footer-quote {
@@ -170,6 +229,7 @@
     
     a.list-group-item, button.list-group-item {
         background-color: var(--bg-color-2);
+        border-color: var(--bg-color-3);
     }
 
     .navbar-nav li.active a.dropdown-toggle, .navbar-nav li.active a.dropdown-toggle:hover {
@@ -181,12 +241,14 @@
     }
     
     .btn-default {
-        color: #333;
+        color: var(--tx-color-1);
         background-color: var(--bg-color-2);
-        border-color: #ccc;
+        border-color: var(--bd-color-1);
     }
     .btn-default:hover {
+        color: var(--tx-color-1);
         background-color: var(--bg-color-1);
+        border-color: var(--bd-color-1);
     }
     
     .user-info {
@@ -389,6 +451,5 @@
     }
     
 }
-
 
 
