@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.2
+@version        1.2.3
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -129,6 +129,10 @@ domain("test.kraland.org") {
     a {
         color: var(--lk-color-1);
         background-color: unset;
+    }
+    
+    a.list-group-item .list-group-item-heading, button.list-group-item .list-group-item-heading {
+        color: var(--tx-color-1);
     }
 
     a.ds_user i,
