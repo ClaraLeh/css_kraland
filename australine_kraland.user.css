@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.7
+@version        1.2.9
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -136,6 +136,7 @@ domain("test.kraland.org") {
         }
     }
 
+
     html {
         background-color: var(--bg-color-1);
     }
@@ -152,6 +153,11 @@ domain("test.kraland.org") {
     a {
         color: var(--lk-color-1);
         background-color: unset;
+    }
+    
+    img {
+        object-fit: cover;
+        object-position: 0 0;
     }
 
     .map-box {
@@ -196,6 +202,15 @@ domain("test.kraland.org") {
     .img-thumbnail {
         background-color: var(--bg-color-1);
         border: 1px solid var(--bd-color-1);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .col-sm-4 img {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        max-height: 100%;
     }
 
     .chat li .chat-body p {
@@ -306,7 +321,8 @@ domain("test.kraland.org") {
         border-color: inherit;
     }
 
-    .pagination > .active > a:hover {
+    .pagination > .active > a:hover,
+    .pagination > .active > a:focus {
         color: var(--lk-color-2);
         background-color: inherit;
         text-decoration: none;
@@ -318,7 +334,8 @@ domain("test.kraland.org") {
         color: var(--bd-color-1);
     }
 
-    .pagination > .disabled > a:hover {
+    .pagination > .disabled > a:hover,
+    .pagination > .disabled > a:focus {
         background-color: inherit;
         color: var(--bd-color-1);
     }
