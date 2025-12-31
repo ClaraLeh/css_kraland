@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.6
+@version        1.2.7
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -273,7 +273,14 @@ domain("test.kraland.org") {
         color: var(--lk-color-1);
         background-color: var(--bg-color-2);
     }
+    
+    .center .pagination {
+        margin: 10px 0;
+    }
 
+    li.media.well {
+        margin-top: 0px;
+    }
 
     .pagination > li > a,
     .pagination > li > a:active,
@@ -406,7 +413,24 @@ domain("test.kraland.org") {
         align-self: center;
         margin-right: 3px;
     }
+    
+    div.panel-body:has(.progress-label){
+        padding: 15px;
+    }
 
+    .progress .progress-bar {
+        background-color: var(--lk-color-1);
+        color: var(--bg-color-1);
+    }
+    
+    .progress .progress-bar[style="width:0%"] {
+        color: transparent;
+    }
+    
+    .progress {
+        max-width: 20em;
+    }
+    
     .panel-heading {
         background-color: var(--bg-color-3) !important;
     }
@@ -913,22 +937,25 @@ domain("test.kraland.org") {
 @-moz-document domain("test.kraland.org") {
 
     @media (prefers-color-scheme: dark) {
-        :root {
-            --bg-color-3: #c45500;
+        
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+            background-image: url("https://i.imgur.com/hItbrkw.png");
+            opacity:0.07;
         }
-
-        body > div:nth-child(1) > div:nth-child(1) {
-            content: url("https://i.imgur.com/3lcAw5C.png");
-        }
+        
     }
 
     @media (prefers-color-scheme: light) {
-        :root {
-            --bg-color-3: #ffa54a;
-        }
-
-        body > div:nth-child(1) > div:nth-child(1) {
-            content: url("https://i.imgur.com/gyygYyR.png");
+        
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+            background-image: url("https://i.imgur.com/RljLzVL.png");
+            opacity:0.07;
         }
     }
 }
