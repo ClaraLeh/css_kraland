@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.10
+@version        1.2.11
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -30,7 +30,7 @@ domain("test.kraland.org") {
         .text-warning {
             color: #e8d1ae;
         }
-        
+
         .alert-warning {
             color: #e8d1ae;
             background-color: #8a6d3b;
@@ -44,29 +44,29 @@ domain("test.kraland.org") {
         .text-primary {
             color: #7ab6ea;
         }
-        
+
         .alert-info {
             color: #d9edf7;
             background-color: #31708f;
             border-color: #4b7b93;
         }
-        
+
         .label-info {
-            background-color: #31708f;            
+            background-color: #31708f;
         }
-        
+
         .alert-success {
             color: #dff0d8;
             background-color: #49754a;
             border-color: #597359;
         }
-        
+
         .alert-danger {
             color: #f2dede;
             background-color: #a94442;
             border-color: #aa5b59;
         }
-        
+
         .f5 {
             color: #4dc24d;
             font-weight: bold;
@@ -164,45 +164,122 @@ domain("test.kraland.org") {
         color: var(--lk-color-1);
         background-color: unset;
     }
-    
+
     img {
         object-fit: cover;
         object-position: 0 0;
     }
-    
+
     img[src^="http://img7.kraland.org/2/pdv"] {
         width: 20px !important;
-        height: 6px !important;
-        object-fit: cover;
-        object-position: bottom;        
+        height: 5px !important;
+        aspect-ratio: auto 20 / 5 !important;
+        object-fit: cover !important;
+        object-position: bottom !important;
     }
     
+    
+    .c100 {
+        background-color: var(--bg-color-2);
+    }
+    
+    .c100::after {
+       background-color: var(--bg-color-2); 
+    }
+    
+    .c100 > span {
+        color: var(--lk-color-1);
+    }
+    
+    .c100:hover > span {
+        color: var(--lk-color-1);
+        width: 3.33em;
+        line-height: 3.33em;
+        font-size: 0.3em;
+    }
+
+    .pie,
+    .c100 .bar,
+    .c100.p51 .fill,
+    .c100.p52 .fill,
+    .c100.p53 .fill,
+    .c100.p54 .fill,
+    .c100.p55 .fill,
+    .c100.p56 .fill,
+    .c100.p57 .fill,
+    .c100.p58 .fill,
+    .c100.p59 .fill,
+    .c100.p60 .fill,
+    .c100.p61 .fill,
+    .c100.p62 .fill,
+    .c100.p63 .fill,
+    .c100.p64 .fill,
+    .c100.p65 .fill,
+    .c100.p66 .fill,
+    .c100.p67 .fill,
+    .c100.p68 .fill,
+    .c100.p69 .fill,
+    .c100.p70 .fill,
+    .c100.p71 .fill,
+    .c100.p72 .fill,
+    .c100.p73 .fill,
+    .c100.p74 .fill,
+    .c100.p75 .fill,
+    .c100.p76 .fill,
+    .c100.p77 .fill,
+    .c100.p78 .fill,
+    .c100.p79 .fill,
+    .c100.p80 .fill,
+    .c100.p81 .fill,
+    .c100.p82 .fill,
+    .c100.p83 .fill,
+    .c100.p84 .fill,
+    .c100.p85 .fill,
+    .c100.p86 .fill,
+    .c100.p87 .fill,
+    .c100.p88 .fill,
+    .c100.p89 .fill,
+    .c100.p90 .fill,
+    .c100.p91 .fill,
+    .c100.p92 .fill,
+    .c100.p93 .fill,
+    .c100.p94 .fill,
+    .c100.p95 .fill,
+    .c100.p96 .fill,
+    .c100.p97 .fill,
+    .c100.p98 .fill,
+    .c100.p99 .fill,
+    .c100.p100 .fill {
+        border: 0.08em solid var(--lk-color-1);
+    }
+
     .panel-info > .panel-heading {
         color: var(--tx-color-1);
     }
-    
+
     .panel-info {
         border-color: var(--bd-color-1);
     }
-    
+
     .panel-info > .panel-heading {
         border-color: var(--bd-color-1);
     }
-    
+
     .modal-footer {
         border-top: 1px solid var(--bd-color-1);
     }
-    
+
     .close {
         color: var(--tx-color-3);
         text-shadow: 0 1px 0 var(--tx-color-3);
     }
-    
-    .close:focus, .close:hover {
+
+    .close:focus,
+    .close:hover {
         color: var(--tx-color-1);
         text-shadow: 0 1px 0 var(--tx-color-1);
     }
-    
+
     .modal-content {
         background-color: var(--bg-color-2);
     }
@@ -211,7 +288,7 @@ domain("test.kraland.org") {
         background-color: var(--bg-color-2);
         color: var(--tx-color-1);
     }
-    
+
     .map-box {
         background-color: var(--bg-color-2);
     }
@@ -219,13 +296,13 @@ domain("test.kraland.org") {
     .map-box-title {
         background-color: var(--bg-color-3);
     }
-    
+
     .map-box-bottom {
         color: var(--tx-color-1);
         background-color: var(--bg-color-3);
         margin-top: 0px;
     }
-    
+
     .map-box-content {
         padding: 4px;
     }
@@ -234,7 +311,34 @@ domain("test.kraland.org") {
     button.list-group-item .list-group-item-heading {
         color: var(--tx-color-1);
     }
+
+    div .list-group-item:last-child {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    div:has(.tooltip) .list-group-item:nth-last-child(2) {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    hr[style="border-top: 1px solid #337ab7; background: transparent;"] {
+        border-top: 1px solid var(--bd-color-1) !important;
+    }
     
+    .list-group-item span:has(div[style="font-size:4px;"]) {
+        font-size: unset !important;
+        display: flex;
+    }
+
+    .list-group-item div[style="font-size:4px;"] {
+        font-size: unset !important;
+        display: flex;
+        flex-direction: column;
+    }
+
     div.alert:has(.pull-right.tagforum) {
         padding-bottom: 25px;
     }
@@ -272,7 +376,7 @@ domain("test.kraland.org") {
         width: 100%;
         height: 100%;
     }
-    
+
     .col-sm-4 img {
         aspect-ratio: 1 / 1;
         width: 100%;
@@ -354,7 +458,7 @@ domain("test.kraland.org") {
         color: var(--lk-color-1);
         background-color: var(--bg-color-2);
     }
-    
+
     .center .pagination {
         margin: 10px 0;
     }
@@ -496,8 +600,8 @@ domain("test.kraland.org") {
         align-self: center;
         margin-right: 3px;
     }
-    
-    div.panel-body:has(.progress-label){
+
+    div.panel-body:has(.progress-label) {
         padding: 15px;
     }
 
@@ -505,15 +609,15 @@ domain("test.kraland.org") {
         background-color: var(--lk-color-1);
         color: var(--bg-color-1);
     }
-    
+
     .progress .progress-bar[style="width:0%"] {
         color: transparent;
     }
-    
+
     .progress {
         max-width: 20em;
     }
-    
+
     .panel-heading {
         background-color: var(--bg-color-3) !important;
     }
@@ -525,7 +629,7 @@ domain("test.kraland.org") {
     .panel-default > .panel-heading {
         border-color: var(--bd-color-1);
     }
-    
+
     .label {
         padding: .2em .4em .3em;
     }
@@ -553,7 +657,7 @@ domain("test.kraland.org") {
     td p.nomargin.mini {
         color: var(--tx-color-3);
     }
-    
+
     .panel-body.panel-news {
         padding: 8px;
     }
@@ -634,11 +738,13 @@ domain("test.kraland.org") {
         color: var(--tx-color-1);
         border-color: var(--bd-color-1);
     }
-    
-    .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+
+    .form-control[disabled],
+    .form-control[readonly],
+    fieldset[disabled] .form-control {
         background-color: var(--bg-color-2);
         color: var(--tx-color-1);
-        border-color: var(--bd-color-1);        
+        border-color: var(--bd-color-1);
     }
 
     #slide-submenu {
@@ -659,12 +765,13 @@ domain("test.kraland.org") {
     .nav-tabs > li > a:hover {
         border-color: var(--bd-color-1);
     }
-    
-    .nav > li > a:focus, .nav > li > a:hover {
+
+    .nav > li > a:focus,
+    .nav > li > a:hover {
         text-decoration: none;
         background-color: unset;
     }
-    
+
     .navbar-nav li.active a.dropdown-toggle,
     .navbar-nav li.active a.dropdown-toggle:hover {
         color: var(--lk-color-2);
@@ -672,12 +779,13 @@ domain("test.kraland.org") {
         font-weight: bold;
     }
 
-    .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    .dropdown-menu > li > a:focus,
+    .dropdown-menu > li > a:hover {
         color: var(--bg-color-1);
         text-decoration: none;
         background-color: var(--tx-color-1);
     }
-    
+
     .nav-tabs > li.active > a,
     .nav-tabs > li.active > a:focus,
     .nav-tabs > li.active > a:hover {
@@ -697,15 +805,23 @@ domain("test.kraland.org") {
     .btn-default,
     .btn-primary {
         color: var(--tx-color-1);
-        background-color: var(--bg-color-2);
+        background-color: var(--bg-color-1);
         border-color: var(--bd-color-1);
     }
 
     .btn-default:hover,
     .btn-primary:hover {
         color: var(--tx-color-1);
-        background-color: var(--bg-color-1);
+        background-color: var(--bg-color-2);
         border-color: var(--bd-color-1);
+    }
+
+    .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-radius: 3px;
+    }
+
+    div[role="tooltip"] {
+        position: absolute;
     }
 
     .user-info {
@@ -796,7 +912,7 @@ domain("test.kraland.org") {
         padding: 0px;
         margin-right: 20px;
     }
-    
+
     span.tagforum {
         font-style: italic;
         color: var(--tx-color-3);
@@ -946,7 +1062,7 @@ domain("test.kraland.org") {
     .tagforum a {
         margin-left: 3px;
     }
-    
+
     p.nomargin.mini a.btn.btn-default {
         font-size: 9px;
         background-color: unset;
@@ -982,11 +1098,11 @@ domain("test.kraland.org") {
 
     ul.pagination.pagination-xsm.nomargin,
     ul.pagination.pagination-xsm.nomargin span {
-        font-size: 9px ;
+        font-size: 9px;
         padding: 1px 4px;
         color: var(--tx-color-3);
     }
-    
+
     ul.pagination.pagination-xsm.nomargin a {
         font-size: 9px;
         padding: 1px 4px;
@@ -1002,7 +1118,7 @@ domain("test.kraland.org") {
     i.fa.fa-lock {
         font-size: 12px;
     }
-    
+
     .tagforum a {
         color: var(--tx-color-3);
     }
@@ -1035,25 +1151,24 @@ domain("test.kraland.org") {
 @-moz-document domain("test.kraland.org") {
 
     @media (prefers-color-scheme: dark) {
-        
-        body::before{
+
+        body::before {
             content:"";
-            position:fixed;
-            inset:0;
+            position: fixed;
+            inset: 0;
             background-image: url("https://i.imgur.com/hItbrkw.png");
-            opacity:0.07;
+            opacity: 0.07;
         }
-        
     }
 
     @media (prefers-color-scheme: light) {
-        
-        body::before{
-            content:"";
-            position:fixed;
-            inset:0;
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
             background-image: url("https://i.imgur.com/RljLzVL.png");
-            opacity:0.07;
+            opacity: 0.07;
         }
     }
 }
