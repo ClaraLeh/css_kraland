@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.9
+@version        1.2.10
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -13,7 +13,7 @@ domain("test.kraland.org") {
     @media (prefers-color-scheme: dark) {
         :root {
             --bg-color-1: #363636;
-            --bg-color-2: #515151;
+            --bg-color-2: #424242;
             --bg-color-3: #717171;
             --lk-color-1: #fde263;
             --lk-color-2: #fff3c4;
@@ -61,6 +61,16 @@ domain("test.kraland.org") {
             border-color: #597359;
         }
         
+        .alert-danger {
+            color: #f2dede;
+            background-color: #a94442;
+            border-color: #aa5b59;
+        }
+        
+        .f5 {
+            color: #4dc24d;
+            font-weight: bold;
+        }
 
 
         /* changement des couleurs preset */
@@ -159,7 +169,49 @@ domain("test.kraland.org") {
         object-fit: cover;
         object-position: 0 0;
     }
+    
+    img[src^="http://img7.kraland.org/2/pdv"] {
+        width: 20px !important;
+        height: 6px !important;
+        object-fit: cover;
+        object-position: bottom;        
+    }
+    
+    .panel-info > .panel-heading {
+        color: var(--tx-color-1);
+    }
+    
+    .panel-info {
+        border-color: var(--bd-color-1);
+    }
+    
+    .panel-info > .panel-heading {
+        border-color: var(--bd-color-1);
+    }
+    
+    .modal-footer {
+        border-top: 1px solid var(--bd-color-1);
+    }
+    
+    .close {
+        color: var(--tx-color-3);
+        text-shadow: 0 1px 0 var(--tx-color-3);
+    }
+    
+    .close:focus, .close:hover {
+        color: var(--tx-color-1);
+        text-shadow: 0 1px 0 var(--tx-color-1);
+    }
+    
+    .modal-content {
+        background-color: var(--bg-color-2);
+    }
 
+    .input-group-addon {
+        background-color: var(--bg-color-2);
+        color: var(--tx-color-1);
+    }
+    
     .map-box {
         background-color: var(--bg-color-2);
     }
@@ -167,10 +219,24 @@ domain("test.kraland.org") {
     .map-box-title {
         background-color: var(--bg-color-3);
     }
+    
+    .map-box-bottom {
+        color: var(--tx-color-1);
+        background-color: var(--bg-color-3);
+        margin-top: 0px;
+    }
+    
+    .map-box-content {
+        padding: 4px;
+    }
 
     a.list-group-item .list-group-item-heading,
     button.list-group-item .list-group-item-heading {
         color: var(--tx-color-1);
+    }
+    
+    div.alert:has(.pull-right.tagforum) {
+        padding-bottom: 25px;
     }
 
     a.ds_user i,
@@ -568,6 +634,12 @@ domain("test.kraland.org") {
         color: var(--tx-color-1);
         border-color: var(--bd-color-1);
     }
+    
+    .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+        background-color: var(--bg-color-2);
+        color: var(--tx-color-1);
+        border-color: var(--bd-color-1);        
+    }
 
     #slide-submenu {
         background: var(--bg-color-2);
@@ -584,6 +656,15 @@ domain("test.kraland.org") {
         border-color: var(--bg-color-3);
     }
 
+    .nav-tabs > li > a:hover {
+        border-color: var(--bd-color-1);
+    }
+    
+    .nav > li > a:focus, .nav > li > a:hover {
+        text-decoration: none;
+        background-color: unset;
+    }
+    
     .navbar-nav li.active a.dropdown-toggle,
     .navbar-nav li.active a.dropdown-toggle:hover {
         color: var(--lk-color-2);
@@ -600,7 +681,7 @@ domain("test.kraland.org") {
     .nav-tabs > li.active > a,
     .nav-tabs > li.active > a:focus,
     .nav-tabs > li.active > a:hover {
-        color: var(--tx-color-1);
+        color: var(--lk-color-2);
         background-color: var(--bg-color-3);
         border-color: var(--bd-color-1);
     }
