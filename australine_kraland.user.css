@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.5
+@version        1.2.6
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -28,8 +28,13 @@ domain("test.kraland.org") {
         }
 
         .text-warning {
-            color: #c6ac82;
-            ;
+            color: #e8d1ae;
+        }
+        
+        .alert-warning {
+            color: #e8d1ae;
+            background-color: #8a6d3b;
+            border-color: #8b744c;
         }
 
         .text-danger {
@@ -39,6 +44,24 @@ domain("test.kraland.org") {
         .text-primary {
             color: #7ab6ea;
         }
+        
+        .alert-info {
+            color: #d9edf7;
+            background-color: #31708f;
+            border-color: #4b7b93;
+        }
+        
+        .label-info {
+            background-color: #31708f;            
+        }
+        
+        .alert-success {
+            color: #dff0d8;
+            background-color: #49754a;
+            border-color: #597359;
+        }
+        
+
 
         /* changement des couleurs preset */
         font[color="5a5a5a"] {
@@ -134,12 +157,13 @@ domain("test.kraland.org") {
     .map-box {
         background-color: var(--bg-color-2);
     }
-    
+
     .map-box-title {
         background-color: var(--bg-color-3);
     }
-    
-    a.list-group-item .list-group-item-heading, button.list-group-item .list-group-item-heading {
+
+    a.list-group-item .list-group-item-heading,
+    button.list-group-item .list-group-item-heading {
         color: var(--tx-color-1);
     }
 
@@ -394,6 +418,10 @@ domain("test.kraland.org") {
     .panel-default > .panel-heading {
         border-color: var(--bd-color-1);
     }
+    
+    .label {
+        padding: .2em .4em .3em;
+    }
 
     .label-default {
         background-color: var(--bg-color-3) !important;
@@ -415,7 +443,10 @@ domain("test.kraland.org") {
         padding: 5px 1px 5px 9px;
     }
 
-
+    td p.nomargin.mini {
+        color: var(--tx-color-3);
+    }
+    
     .panel-body.panel-news {
         padding: 8px;
     }
@@ -514,9 +545,17 @@ domain("test.kraland.org") {
 
     .navbar-nav li.active a.dropdown-toggle,
     .navbar-nav li.active a.dropdown-toggle:hover {
-        background-color: var(--lk-color-1);
+        color: var(--lk-color-2);
+        text-decoration: none;
+        font-weight: bold;
     }
 
+    .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+        color: var(--bg-color-1);
+        text-decoration: none;
+        background-color: var(--tx-color-1);
+    }
+    
     .nav-tabs > li.active > a,
     .nav-tabs > li.active > a:focus,
     .nav-tabs > li.active > a:hover {
@@ -619,46 +658,14 @@ domain("test.kraland.org") {
         border-left: 5px solid var(--bg-color-3);
     }
 
-    /*   
-    // CUSTOM FLAG ON FORUM
-    
-    .cartouche:has(a[href="communaute/membres/---"])>div:nth-child(1)>img {
-        display: none;
+    a.list-group-item.ds_game > img {
+        margin-right: 5px;
     }
-    
-    .cartouche:has(a[href="communaute/membres/---"])>div:nth-child(1)::after {
-        content: '';
-        background-image: url(---);
-        background-size: 80px;
-        display:flex;
-        align-self: center;
-        width:80px;
-        height:26px;
+
+    a.list-group-item.ds_game {
+        padding: 10px;
     }
-*/
-    /*
-    // CUSTOM AVATAR FOR FAMILIARS
-    
-    a[data-original-title="--- [archange ven.] (60/60 PV)"] {
-        
-    }
-    
-    a[data-original-title="--- [archange ven.] (60/60 PV)"]>img {
-        display:none;
-    }
-    
-    a[data-original-title="--- [archange ven.] (60/60 PV)"]::before {
-        content:'';
-        background-image: url(---);
-        background-size: 32px;
-        display:block;
-        align-self: center;
-        width: 32px;
-        height: 32px;
-        float: left !important;
-    }  
-    
-*/
+
     .cartouche {
         font-size: unset;
     }
@@ -667,6 +674,36 @@ domain("test.kraland.org") {
         padding: 0px;
         margin-right: 20px;
     }
+    
+    span.tagforum {
+        font-style: italic;
+        color: var(--tx-color-3);
+    }
+
+    /* CUSTOM PI FLAG ON FORUM */
+    .cartouche:has(a[href="communaute/membres/---"]) > div:nth-child(1) > img[src="http://img7.kraland.org/2/world/logo9.gif"] {
+        content: url("---");
+    }
+
+
+    /* CUSTOM AVATAR FOR FAMILIARS */
+    a[data-original-title^="Reine [archange ven.]"] > img {
+        display: none;
+    }
+
+    a[data-original-title^="Reine [archange ven.]"]::before {
+        content: '';
+        background-image: url(---);
+        background-size: 32px;
+        display: block;
+        align-self: center;
+        width: 32px;
+        height: 32px;
+        margin-right: 5px;
+        float: left !important;
+    }
+
+    /* ------------------------------------ */
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/.*") {
 
@@ -787,6 +824,11 @@ domain("test.kraland.org") {
     .tagforum a {
         margin-left: 3px;
     }
+    
+    p.nomargin.mini a.btn.btn-default {
+        font-size: 9px;
+        background-color: unset;
+    }
 }
 
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/[^/]*/(?!repondre)(?!nouveau)[^/]*") {
@@ -816,17 +858,31 @@ domain("test.kraland.org") {
         width: 55%;
     }
 
-    ul.pagination.pagination-xsm.nomargin > li > a {
+    ul.pagination.pagination-xsm.nomargin,
+    ul.pagination.pagination-xsm.nomargin span {
+        font-size: 9px ;
+        padding: 1px 4px;
+        color: var(--tx-color-3);
+    }
+    
+    ul.pagination.pagination-xsm.nomargin a {
         font-size: 9px;
         padding: 1px 4px;
+        color: var(--tx-color-3);
+        border: dashed;
     }
 
     p.nomargin.mini a.btn.btn-default {
-        font-size: 10px;
+        font-size: 9px;
+        background-color: unset;
     }
 
     i.fa.fa-lock {
         font-size: 12px;
+    }
+    
+    .tagforum a {
+        color: var(--tx-color-3);
     }
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/post/[^/]*") {
