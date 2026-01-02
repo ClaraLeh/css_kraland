@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.14
+@version        1.2.15
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -1090,6 +1090,71 @@ domain("test.kraland.org") {
 
 
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/sujet.*") {
+    
+    
+    @media (max-width: 767px) {
+        .pull-left:has(.user-info) {
+            float: none !important;   
+            margin: 0px 0px 15px 0px !important;
+            position: relative;
+            width: 100%;
+        }
+        
+        .pull-left .user-info {
+            display: block;
+            width: 100% !important;
+            position: relative;
+        }
+        
+        .pull-left .user-info:has(.avatar) {
+            height: 120px;
+        }
+        
+        .pull-left .user-info>img {
+            position: absolute;
+            right: 52%;
+            top: 0%;
+            justify-content: start;
+        }
+        .pull-left .user-info:has(.avatar)>:not(img) {
+            position: relative;
+            display: flex;
+            left: 52%;
+            top: 10px;
+            text-align: left;
+            justify-content: start;
+        }
+        .pull-left .user-info:not(:has(.avatar)) strong {
+            position: unset;
+            display: flex;
+            top: 10px;
+            text-align: center;
+            justify-content: center;
+            align-self: center;
+        }        
+
+        
+        .user-info > .cartouche > strong {
+            display: flex;
+            align-self: unset;
+            margin-top: 5px;
+        }
+        
+        .media.well .media-body .btn-group.btn-group-xs {
+            display: flex;
+            align-items: center;
+            justify-content: center;   
+            margin-bottom: 5px;
+        }
+        .media.well .media-body .pull-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            float: none !important;
+        }
+        
+        
+    }
     
     .pagination > li.active > a {
         color: var(--lk-color-2);
