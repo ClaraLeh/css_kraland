@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.11
+@version        1.2.12
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -375,7 +375,7 @@ domain("test.kraland.org") {
         object-fit: cover;
         width: 100%;
         height: 100%;
-    }
+  }
 
     .col-sm-4 img {
         aspect-ratio: 1 / 1;
@@ -434,6 +434,10 @@ domain("test.kraland.org") {
     .navbar-inverse .navbar-nav > li > a:hover {
         color: var(--lk-color-2);
         background-color: unset;
+    }
+    
+    .input-group-addon {
+        border: 1px solid var(--bd-color-1);
     }
 
     a.list-group-item:focus,
@@ -841,6 +845,8 @@ domain("test.kraland.org") {
         height: auto;
         background-color: var(--bg-color-1);
         border: 1px solid var(--bd-color-1);
+        aspect-ratio: 1 / 1;
+        max-height: 100%;
     }
 
     .user-info > strong {
@@ -917,6 +923,18 @@ domain("test.kraland.org") {
         font-style: italic;
         color: var(--tx-color-3);
     }
+    
+    .btn.btn-secondary.btn-xs.xmini {
+        color: #333;
+    }
+    
+    .btn.btn-primary.btn-xs.xmini {
+        background-color: #337ab7;
+    }
+    
+    td[style="width:16px;vertical-align:top;padding: 0px 0px 0px 4px"] {
+        background-color: var(--bg-color-1);
+    }
 
     /* CUSTOM PI FLAG ON FORUM */
     .cartouche:has(a[href="communaute/membres/---"]) > div:nth-child(1) > img[src="http://img7.kraland.org/2/world/logo9.gif"] {
@@ -925,13 +943,13 @@ domain("test.kraland.org") {
 
 
     /* CUSTOM AVATAR FOR FAMILIARS */
-    a[data-original-title^="Reine [archange ven.]"] > img {
+    a[data-original-title^="Sylke Isekai [partisan]"] > img {
         display: none;
     }
 
-    a[data-original-title^="Reine [archange ven.]"]::before {
+    a[data-original-title^="Sylke Isekai [partisan]"]::before {
         content: '';
-        background-image: url(---);
+        background-image: url(https://i.imgur.com/d2pO9S6.png);
         background-size: 32px;
         display: block;
         align-self: center;
@@ -939,6 +957,7 @@ domain("test.kraland.org") {
         height: 32px;
         margin-right: 5px;
         float: left !important;
+        border-left: 3px solid #d9534f;
     }
 
     /* ------------------------------------ */
