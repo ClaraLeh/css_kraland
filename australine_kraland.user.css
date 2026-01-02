@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.15
+@version        1.2.16
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -144,8 +144,15 @@ domain("test.kraland.org") {
             -webkit-box-shadow: none;
             box-shadow: none;
         }
+        .navbar-collapse1 {
+            background-color: var(--bg-color-3);
+            border: 1px solid var(--tx-color-1);
+        }
+        
+        body {
+            overflow-x: hidden !important;
+        }
     }
-
 
     html {
         background-color: var(--bg-color-1);
@@ -177,20 +184,20 @@ domain("test.kraland.org") {
         object-fit: cover !important;
         object-position: bottom !important;
     }
-    
-    
+
+
     .c100 {
         background-color: var(--bg-color-2);
     }
-    
+
     .c100::after {
-       background-color: var(--bg-color-2); 
+        background-color: var(--bg-color-2);
     }
-    
+
     .c100 > span {
         color: var(--lk-color-1);
     }
-    
+
     .c100:hover > span {
         color: var(--lk-color-1);
         width: 3.33em;
@@ -327,7 +334,7 @@ domain("test.kraland.org") {
     hr[style="border-top: 1px solid #337ab7; background: transparent;"] {
         border-top: 1px solid var(--bd-color-1) !important;
     }
-    
+
     .list-group-item span:has(div[style="font-size:4px;"]) {
         font-size: unset !important;
         display: flex;
@@ -375,7 +382,7 @@ domain("test.kraland.org") {
         object-fit: cover;
         width: 100%;
         height: 100%;
-  }
+    }
 
     .col-sm-4 img {
         aspect-ratio: 1 / 1;
@@ -435,7 +442,7 @@ domain("test.kraland.org") {
         color: var(--lk-color-2);
         background-color: unset;
     }
-    
+
     .input-group-addon {
         border: 1px solid var(--bd-color-1);
     }
@@ -923,15 +930,15 @@ domain("test.kraland.org") {
         font-style: italic;
         color: var(--tx-color-3);
     }
-    
+
     .btn.btn-secondary.btn-xs.xmini {
         color: #333;
     }
-    
+
     .btn.btn-primary.btn-xs.xmini {
         background-color: #337ab7;
     }
-    
+
     td[style="width:16px;vertical-align:top;padding: 0px 0px 0px 4px"] {
         background-color: var(--bg-color-1);
     }
@@ -1090,33 +1097,33 @@ domain("test.kraland.org") {
 
 
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/sujet.*") {
-    
-    
+
+
     @media (max-width: 767px) {
         .pull-left:has(.user-info) {
-            float: none !important;   
+            float: none !important;
             margin: 0px 0px 15px 0px !important;
             position: relative;
             width: 100%;
         }
-        
+
         .pull-left .user-info {
             display: block;
             width: 100% !important;
             position: relative;
         }
-        
+
         .pull-left .user-info:has(.avatar) {
             height: 120px;
         }
-        
-        .pull-left .user-info>img {
+
+        .pull-left .user-info > img {
             position: absolute;
             right: 52%;
             top: 0%;
             justify-content: start;
         }
-        .pull-left .user-info:has(.avatar)>:not(img) {
+        .pull-left .user-info:has(.avatar) > :not(img) {
             position: relative;
             display: flex;
             left: 52%;
@@ -1131,31 +1138,29 @@ domain("test.kraland.org") {
             text-align: center;
             justify-content: center;
             align-self: center;
-        }        
+        }
 
-        
+
         .user-info > .cartouche > strong {
             display: flex;
             align-self: unset;
             margin-top: 5px;
         }
-        
+
         .media.well .media-body .btn-group.btn-group-xs {
             display: flex;
             align-items: center;
-            justify-content: center;   
+            justify-content: center;
             margin-bottom: 5px;
         }
         .media.well .media-body .pull-right {
             display: flex;
             align-items: center;
-            justify-content: center;  
+            justify-content: center;
             float: none !important;
         }
-        
-        
     }
-    
+
     .pagination > li.active > a {
         color: var(--lk-color-2);
         background-color: var(--lk-color-1);
@@ -1169,7 +1174,6 @@ domain("test.kraland.org") {
         text-decoration: none;
         border-color: inherit;
     }
-    
 }
 
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/[^/]*/(?!repondre)(?!nouveau)[^/]*") {
