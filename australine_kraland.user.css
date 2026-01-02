@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.13
+@version        1.2.14
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -1086,6 +1086,25 @@ domain("test.kraland.org") {
         font-size: 9px;
         background-color: unset;
     }
+}
+
+
+@-moz-document regexp("http://.*\\.kraland\\.org/forum/sujet.*") {
+    
+    .pagination > li.active > a {
+        color: var(--lk-color-2);
+        background-color: var(--lk-color-1);
+        border-color: inherit;
+    }
+
+    .pagination > li.active > a:hover,
+    .pagination > li.active > a:focus {
+        color: var(--lk-color-2);
+        background-color: var(--lk-color-1);
+        text-decoration: none;
+        border-color: inherit;
+    }
+    
 }
 
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/[^/]*/(?!repondre)(?!nouveau)[^/]*") {
