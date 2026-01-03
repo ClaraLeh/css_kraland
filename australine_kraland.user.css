@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.16
+@version        1.2.17
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -883,6 +883,8 @@ domain("test.kraland.org") {
         width: 80px;
         max-width: 100%;
         height: auto;
+        align-self: center;
+        display: flex;
     }
 
     .user-info > .cartouche > div:nth-child(1) > img {
@@ -1127,19 +1129,44 @@ domain("test.kraland.org") {
             position: relative;
             display: flex;
             left: 52%;
-            top: 10px;
             text-align: left;
             justify-content: start;
         }
         .pull-left .user-info:not(:has(.avatar)) strong {
             position: unset;
             display: flex;
-            top: 10px;
             text-align: center;
             justify-content: center;
             align-self: center;
         }
+        
+                
+        .user-info > .cartouche > div {
+            display: flex;
+            align-self: unset !important;
+        }    
+        
+        .user-info > .cartouche > div > img {
+            display: flex;
+            align-self: center;
+        }    
+        
+        .user-info > .cartouche > div:nth-child(1) {
+            width: 80px;
+            max-width: 100%;
+            height: auto;
+            align-self: unset !important;
+            display: flex;
+        }
 
+        .user-info > .cartouche > div:nth-child(1) > img {
+            display: flex;
+            align-self: center;
+            width: 80px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2px;
+        }
 
         .user-info > .cartouche > strong {
             display: flex;
