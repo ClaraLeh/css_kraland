@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.18
+@version        1.2.19
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -585,10 +585,6 @@ domain("test.kraland.org") {
         font-weight: 550;
     }
 
-    div#col-right thead {
-        display: none;
-    }
-
     div#col-right tbody tr td {
         border-top: none;
     }
@@ -868,6 +864,12 @@ domain("test.kraland.org") {
         margin-top: 5px;
     }
 
+    .user-info > .cartouche > span {
+        align-self: center;
+        width : fit-content;
+        margin-top: 5px;
+    }
+    
     .user-info > .cartouche {
         display: flex;
         align-self: center;
@@ -977,6 +979,11 @@ domain("test.kraland.org") {
     .panel-body {
         padding: 0px;
     }
+    
+    div#col-right thead {
+        display: none;
+    }
+
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/contacts") {
 
@@ -1007,6 +1014,12 @@ domain("test.kraland.org") {
     }
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/map.*") {
+    
+    @media (max-width: 767px) {       
+        body {
+            overflow-x: unset !important;
+        }
+    }
 
     .pagination a:has(select) {
         padding: 5px;
@@ -1098,7 +1111,7 @@ domain("test.kraland.org") {
 }
 
 
-@-moz-document regexp("http://.*\\.kraland\\.org/forum/sujet.*") {
+@-moz-document regexp("http://.*\\.kraland\\.org/forum/sujet.*"), regexp("http://.*\\.kraland\\.org/kramail/post.*") {
 
 
     @media (max-width: 767px) {
@@ -1171,6 +1184,12 @@ domain("test.kraland.org") {
         .user-info > .cartouche > strong {
             display: flex;
             align-self: unset;
+            margin-top: 5px;
+        }
+        
+        .user-info > .cartouche > span {
+            align-self: unset;
+            width : fit-content;
             margin-top: 5px;
         }
 
