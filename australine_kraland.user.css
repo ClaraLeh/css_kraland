@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.23
+@version        1.2.24
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -1055,6 +1055,13 @@ domain("test.kraland.org") {
             margin-top: 5px;
             margin-bottom: 5px;
         }       
+        
+        & .col-md-8.col-xs-12 .well {
+            border-color: transparent;
+            background-color: transparent;
+            -webkit-box-shadow: unset;
+            box-shadow: unset;
+        }
         
     }
         
