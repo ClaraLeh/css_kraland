@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.29
+@version        1.2.30
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -590,7 +590,7 @@ domain("test.kraland.org") {
     .pagination > .active > span,
     .pagination > .active > span:focus,
     .pagination > .active > span:hover {
-        color: var(--tx-color-1);
+        color: var(--lk-color-2);
         cursor: default;
         background-color: var(--lk-color-1);
         border-color: var(--bd-color-1);
