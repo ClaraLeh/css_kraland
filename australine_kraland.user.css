@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.30
+@version        1.2.31
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -1252,6 +1252,15 @@ domain("test.kraland.org") {
         margin: 0px;
         padding: 20px;
         border-bottom: 3px dashed var(--bd-color-1);
+    }
+}
+
+@-moz-document regexp("http://.*\\.kraland\\.org/jouer/plateau.*") {
+
+    @media (max-width: 767px) {
+        body {
+            overflow-x: unset !important;
+        }
     }
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/map.*") {
