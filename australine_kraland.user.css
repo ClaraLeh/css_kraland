@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.24
+@version        1.2.25
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -148,7 +148,7 @@ domain("test.kraland.org") {
             background-color: var(--bg-color-3);
             border: 1px solid var(--tx-color-1);
         }
-        
+
         body {
             overflow-x: hidden !important;
         }
@@ -489,6 +489,18 @@ domain("test.kraland.org") {
         border: 1px solid var(--bg-color-3) !important;
     }
 
+    .pagination > .active > a,
+    .pagination > .active > a:focus,
+    .pagination > .active > a:hover,
+    .pagination > .active > span,
+    .pagination > .active > span:focus,
+    .pagination > .active > span:hover {
+        color: var(--tx-color-1);
+        cursor: default;
+        background-color: var(--lk-color-1);
+        border-color: var(--bd-color-1);
+    }
+
     .pagination > li > a:hover,
     .pagination > li > span:hover {
         color: var(--lk-color-2);
@@ -659,6 +671,7 @@ domain("test.kraland.org") {
     table.dataTable tbody th,
     table.dataTable tbody td {
         padding: 5px 1px 5px 9px;
+        border-top: 1px solid var(--bd-color-1);
     }
 
     td p.nomargin.mini {
@@ -866,10 +879,10 @@ domain("test.kraland.org") {
 
     .user-info > .cartouche > span {
         align-self: center;
-        width : fit-content;
+        width: fit-content;
         margin-top: 5px;
     }
-    
+
     .user-info > .cartouche {
         display: flex;
         align-self: center;
@@ -947,6 +960,10 @@ domain("test.kraland.org") {
         background-color: var(--bg-color-1);
     }
 
+    .table-striped > tbody > tr:nth-of-type(2n + 1) {
+        background-color: var(--bg-color-2);
+    }
+
     /* CUSTOM PI FLAG ON FORUM */
     .cartouche:has(a[href="communaute/membres/---"]) > div:nth-child(1) > img[src="http://img7.kraland.org/2/world/logo9.gif"] {
         content: url("---");
@@ -970,7 +987,7 @@ domain("test.kraland.org") {
         float: left !important;
         border-left: 3px solid #d9534f;
     }
-    
+
     a[data-original-title^="Apostrophe ["]:not(:has(i)) > img {
         display: none;
     }
@@ -987,7 +1004,7 @@ domain("test.kraland.org") {
         float: left !important;
         border-left: 3px solid #d9534f;
     }
-    
+
     a[data-original-title^="Marianne [secrétaire]"]:not(:has(i)) > img {
         display: none;
     }
@@ -1006,13 +1023,10 @@ domain("test.kraland.org") {
     }
 
     /* ------------------------------------ */
-    
-    
     /* SPECIFIQUES AU RP ALEOCRATE */
-    
     body:has(div.user-info a[href="communaute/membres/naphte-1-84681"]),
-    body:has(#ajax-sex184681) { 
-        
+    body:has(#ajax-sex184681) {
+
         @media (prefers-color-scheme: dark) {
             /* --bg-color-1: #363636; */
             /* --bg-color-2: #424242; */
@@ -1024,7 +1038,7 @@ domain("test.kraland.org") {
             --tx-color-3: #a4a4a4;
             --bd-color-1: #616161;*/
         }
-        
+
         @media (prefers-color-scheme: light) {
             /* --bg-color-1: #363636; */
             /* --bg-color-2: #424242; */
@@ -1036,51 +1050,50 @@ domain("test.kraland.org") {
             --tx-color-3: #a4a4a4;
             --bd-color-1: #616161;*/
         }
-        
-        & > div:nth-child(1) > div:nth-child(1)  {
+
+        & > div:nth-child(1) > div:nth-child(1) {
             content: url("https://i.imgur.com/SlfQ9ZE.png");
         }
-        
+
         & div.user-info > strong {
-           flex-direction: column;   
+            flex-direction: column;
         }
-        
+
         & div.user-info > strong::before {
             display: flex;
-            width:80px;
-            height:26px;
+            width: 80px;
+            height: 26px;
             content: "";
             background-image: url("https://i.imgur.com/fLnPi4f.png");
             background-size: contain;
             margin-top: 5px;
             margin-bottom: 5px;
-        }       
-        
+        }
+
         & .col-md-8.col-xs-12 .well {
             border-color: transparent;
             background-color: transparent;
             -webkit-box-shadow: unset;
             box-shadow: unset;
         }
-        
     }
-        
-        /* naphte */
+
+    /* naphte */
     body:has(div.user-info a[href="communaute/membres/naphte-1-84681"]),
     body:has(#ajax-sex184681) {
-        
+
         & .user-info .cartouche p {
             visibility: hidden;
             position: relative;
             width: 100%;
             height: 50px;
         }
-        
+
         & .user-info .cartouche {
             margin-top: 0px;
-            width:100%;
+            width: 100%;
         }
-        
+
         & .user-info .cartouche p::after {
             visibility: visible;
             position: absolute;
@@ -1092,27 +1105,22 @@ domain("test.kraland.org") {
             margin-top: 0px;
             margin-bottom: 10px;
         }
-        
-        & .panel-body .row>div:nth-child(1),
-        .panel-body .row>div:nth-child(2),
+
+        & .panel-body .row > div:nth-child(1),
+        .panel-body .row > div:nth-child(2),
         .panel-body .row h2,
         .panel-body .row p {
             display: none;
         }
         & .panel-body .row::before {
             background-image: url('https://i.imgur.com/En6nvlG.png');
-              background-repeat: no-repeat;
-              background-size: contain;
+            background-repeat: no-repeat;
+            background-size: contain;
             display: inline-block;
-            width: 100%; 
+            width: 100%;
             height: 140px;
-        }        
-        
+        }
     }
-    
-    
-    
-        
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/.*") {
 
@@ -1120,11 +1128,10 @@ domain("test.kraland.org") {
     .panel-body {
         padding: 0px;
     }
-    
+
     div#col-right thead {
         display: none;
     }
-
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/contacts") {
 
@@ -1155,8 +1162,8 @@ domain("test.kraland.org") {
     }
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/map.*") {
-    
-    @media (max-width: 767px) {       
+
+    @media (max-width: 767px) {
         body {
             overflow-x: unset !important;
         }
@@ -1196,7 +1203,7 @@ domain("test.kraland.org") {
     }
 
     .mini {
-        color: #333;
+        color: var(--tx-color-1);
     }
 }
 @-moz-document regexp("http://.*\\.kraland\\.org/forum/(?!top20)[^/]*") {
@@ -1252,7 +1259,8 @@ domain("test.kraland.org") {
 }
 
 
-@-moz-document regexp("http://.*\\.kraland\\.org/forum/sujet.*"), regexp("http://.*\\.kraland\\.org/kramail/post.*") {
+@-moz-document regexp("http://.*\\.kraland\\.org/forum/sujet.*"),
+regexp("http://.*\\.kraland\\.org/kramail/post.*") {
 
 
     @media (max-width: 767px) {
@@ -1293,18 +1301,18 @@ domain("test.kraland.org") {
             justify-content: center;
             align-self: center;
         }
-        
-                
+
+
         .user-info > .cartouche > div {
             display: flex;
             align-self: unset !important;
-        }    
-        
+        }
+
         .user-info > .cartouche > div > img {
             display: flex;
             align-self: center;
-        }    
-        
+        }
+
         .user-info > .cartouche > div:nth-child(1) {
             width: 80px;
             max-width: 100%;
@@ -1327,10 +1335,10 @@ domain("test.kraland.org") {
             align-self: unset;
             margin-top: 5px;
         }
-        
+
         .user-info > .cartouche > span {
             align-self: unset;
-            width : fit-content;
+            width: fit-content;
             margin-top: 5px;
         }
 
