@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.27
+@version        1.2.28
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -234,6 +234,10 @@ domain("test.kraland.org") {
         /* Description : couleur de fond des Limbes */
         /* Usage : généralisé */
         background-color: var(--ll-color);
+    }
+    
+    .progress .progress-bar.progress-bar-warning {
+        background-color: var(--bg-color-2);
     }
     
     html {
