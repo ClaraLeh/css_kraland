@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.25
+@version        1.2.26
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -21,6 +21,17 @@ domain("test.kraland.org") {
             --tx-color-2: #c4c4c4;
             --tx-color-3: #a4a4a4;
             --bd-color-1: #616161;
+            
+            --kr-color: #8e3939;
+            --eb-color: #5f4107;
+            --pc-color: #aeae3d;
+            --ts-color: #36369d;
+            --pv-color: #338c33;
+            --ke-color: #6f3a92;
+            --cl-color: #616161;
+            --rr-color: #486848;
+            --pi-color: #5f5f1d;
+            --ll-color: #6bacac;
         }
 
         body > div:nth-child(1) > div:nth-child(1) {
@@ -126,6 +137,17 @@ domain("test.kraland.org") {
             --tx-color-2: #666;
             --tx-color-3: #999;
             --bd-color-1: #ddd;
+            
+            --kr-color: #FF8080;
+            --eb-color: #AA7000;
+            --pc-color: #FFFF80;
+            --ts-color: #8080FF;
+            --pv-color: #80FF80;
+            --ke-color: #CC80FF;
+            --cl-color: #AAAAAA;
+            --rr-color: #739773;
+            --pi-color: #AAAA44;
+            --ll-color: #CCFFFF;
         }
 
         body > div:nth-child(1) > div:nth-child(1) {
@@ -154,6 +176,66 @@ domain("test.kraland.org") {
         }
     }
 
+    .c1 {
+        /* Description : couleur de fond de la République de Kraland */
+        /* Usage : généralisé */
+        background-color: var(--kr-color);
+    }
+
+    .c2 {
+        /* Description : couleur de fond de l'Empire Brun */
+        /* Usage : généralisé */
+        background-color: var(--eb-color);
+    }
+
+    .c3 {
+        /* Description : couleur de fond de la Palladium Corporation */
+        /* Usage : généralisé */
+        background-color: var(--pc-color);
+    }
+
+    .c4 {
+        /* Description : couleur de fond de la Théocratie Seelienne */
+        /* Usage : généralisé */
+        background-color: var(--ts-color);
+    }
+
+    .c5 {
+        /* Description : couleur de fond du Paradigme Vert */
+        /* Usage : généralisé */
+        background-color: var(--pv-color);
+    }
+
+    .c6 {
+        /* Description : couleur de fond du Khanat Elmérien */
+        /* Usage : généralisé */
+        background-color: var(--ke-color);
+    }
+
+    .c7 {
+        /* Description : couleur de fond de la Confédération Libre */
+        /* Usage : généralisé */
+        background-color: var(--cl-color);
+    }
+
+    .c8 {
+        /* Description : couleur de fond du Royaume de Ruthvénie */
+        /* Usage : généralisé */
+        background-color: var(--rr-color);
+    }
+
+    .c9 {
+        /* Description : couleur de fond des Provinces Indépendantes */
+        /* Usage : généralisé */
+        background-color: var(--pi-color);
+    }
+
+    .c10 {
+        /* Description : couleur de fond des Limbes */
+        /* Usage : généralisé */
+        background-color: var(--ll-color);
+    }
+    
     html {
         background-color: var(--bg-color-1);
     }
@@ -492,6 +574,7 @@ domain("test.kraland.org") {
     .pagination > .active > a,
     .pagination > .active > a:focus,
     .pagination > .active > a:hover,
+    .pagination > .active > a:visited,
     .pagination > .active > span,
     .pagination > .active > span:focus,
     .pagination > .active > span:hover {
@@ -517,7 +600,6 @@ domain("test.kraland.org") {
     .pagination > .active > a:hover,
     .pagination > .active > a:focus {
         color: var(--lk-color-2);
-        background-color: inherit;
         text-decoration: none;
         border-color: inherit;
     }
