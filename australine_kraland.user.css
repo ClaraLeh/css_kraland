@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.31
+@version        1.2.32
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -1114,7 +1114,25 @@ domain("test.kraland.org") {
         float: left !important;
         border-left: 3px solid #d9534f;
     }
+    
+    a[data-original-title^="Velma [geek]"]:not(:has(i)) > img {
+        display: none;
+    }
 
+    a[data-original-title^="Velma [geek]"]:not(:has(i))::before {
+        content: '';
+        background-image: url("https://i.imgur.com/lKfaAYK.jpeg");
+        background-size: 32px;
+        display: block;
+        align-self: center;
+        width: 32px;
+        height: 32px;
+        margin-right: 5px;
+        float: left !important;
+        border-left: 3px solid #d9534f;
+    }
+    
+    
     /* ------------------------------------ */
     /* SPECIFIQUES AU RP ALEOCRATE */
     body:has(div.user-info a[href="communaute/membres/naphte-1-84681"]),
