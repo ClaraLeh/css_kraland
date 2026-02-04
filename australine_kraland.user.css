@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Australine
 @namespace      github.com/openstyles/stylus
-@version        1.2.32
+@version        1.3.0
 @description    A compact style for kraland.org
 @author         clarasylke on discord
 @homepageURL    https://github.com/ClaraLeh/css_kraland
@@ -1057,9 +1057,62 @@ domain("test.kraland.org") {
         background-color: var(--bg-color-2);
     }
 
-    /* CUSTOM PI FLAG ON FORUM */
-    .cartouche:has(a[href="communaute/membres/---"]) > div:nth-child(1) > img[src="http://img7.kraland.org/2/world/logo9.gif"] {
-        content: url("---");
+    /* PERSONAS D'ORGANISATIONS */
+    
+    li.media.well:has(.cartouche):has(.avatar[alt="Aléocratie Maztike"]):has(.img-responsive[src="https://i.imgur.com/rlJrcoW.png"]) {
+        
+        & .cartouche::before {
+            content: '';
+            background-image: url("https://i.imgur.com/7INi8EQ.png");
+            background-size: 112px;
+            display: block;
+            align-self: center;
+            width: 112px;
+            height: 112px;
+            float: left !important;
+            margin-bottom: 8px;
+            border-radius: 8px;
+        }
+        
+        & .avatar[alt="Aléocratie Maztike"] {
+            display: none;
+        }
+        
+        & .cartouche > span {
+            font-size: 0;
+        }
+        
+        & .cartouche > span::before {
+            content: "--- Guilde --- Aléocratie Maztike";
+            line-height: normal;
+            white-space: pre-wrap;
+            display: block;
+            font-size: 10px;
+            padding: .2em .6em .3em;
+            font-weight: 700;
+        }
+
+        & strong > a {
+            font-size: 0;
+        }
+        
+        & strong > a::before {
+            content: "Djinn";
+            white-space: pre-wrap;
+            display: block;
+            font-size: 14px;
+            padding: .2em .6em .3em;
+            font-weight: 700;
+        }
+        
+        & .img-responsive[src="https://i.imgur.com/joS26qs.png"] {
+            display: none !important;
+        }
+        
+        & img[src="https://i.imgur.com/rlJrcoW.png"] {
+            display: none !important;
+        }
+        
     }
 
 
@@ -1491,7 +1544,7 @@ regexp("http://.*\\.kraland\\.org/kramail/post.*") {
     }
 }
 
-@-moz-document regexp("http://.*\\.kraland\\.org/forum/[^/]*/(?!repondre)(?!nouveau)[^/]*") {
+@-moz-document regexp("http://.*\\.kraland\\.org/forum/[^/]*/(?!repondre)(?!nouveau)(?!modifier)[^/]*") {
 
     /*      regexp targets forum/???/???         */
     div#col-right tbody tr td:nth-child(2)::before {
